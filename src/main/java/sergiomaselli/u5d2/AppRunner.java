@@ -1,5 +1,7 @@
 package sergiomaselli.u5d2;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -10,15 +12,38 @@ import sergiomaselli.u5d2.enums.StatoTavolo;
 @Component
 public class AppRunner implements CommandLineRunner {
 
-    private final Pizza margherita;
-    private final Pizza diavola;
-    private final Topping cheese;
-    private final Topping salami;
-    private final Drink coca;
-    private final Drink lemonade;
-    private final Tavolo tavolo1;
-    private final Tavolo tavolo2;
-    private final double prezzoCoperto;
+    @Autowired
+    @Qualifier("margherita")
+    private MenuItem margherita;
+
+    @Autowired
+    @Qualifier("diavola")
+    private MenuItem diavola;
+
+    @Autowired
+    @Qualifier("cheese")
+    private MenuItem cheese;
+
+    @Autowired
+    @Qualifier("salami")
+    private MenuItem salami;
+
+    @Autowired
+    @Qualifier("coca")
+    private MenuItem coca;
+
+    @Autowired
+    @Qualifier("lemonade")
+    private MenuItem lemonade;
+
+    @Autowired
+    private Tavolo tavolo1;
+
+    @Autowired
+    private Tavolo tavolo2;
+
+    @Value("${coperto.prezzo}")
+    private double prezzoCoperto;
 
     public AppRunner(
             Pizza margherita,
