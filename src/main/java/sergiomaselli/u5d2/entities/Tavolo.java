@@ -1,9 +1,7 @@
 package sergiomaselli.u5d2.entities;
 
-import org.springframework.stereotype.Component;
 import sergiomaselli.u5d2.enums.StatoTavolo;
 
-@Component
 public class Tavolo {
     private int numero;
     private int copertiMax;
@@ -16,7 +14,7 @@ public class Tavolo {
         this.copertiMax = copertiMax;
         this.status = StatoTavolo.LIBERO;
     }
-    
+
     public Tavolo(int numero, int copertiMax, StatoTavolo statoTavolo) {
         this.numero = numero;
         this.copertiMax = copertiMax;

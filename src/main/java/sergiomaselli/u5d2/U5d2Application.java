@@ -22,7 +22,7 @@ public class U5d2Application {
 //        topping.print();
 //
 //        Topping topping2 = context.getBean("salami", Topping.class);
-//        topping.print();
+//        topping2.print();
 //
 //        Drink drink = context.getBean("coca", Drink.class);
 //        drink.print();
