@@ -33,7 +33,7 @@ public class Ordine {
             totale += item.getPrice();
         }
         System.out.println("Coperto (€" + coperto + " x " + tavolo.getCopertiMax() + ")");
-        System.out.println("Totale: €" + totale);
+        System.out.println("Totale: €" + String.format("%.2f", totale));
         System.out.println("=========================");
     }
 }
