@@ -37,10 +37,13 @@ public class AppRunner implements CommandLineRunner {
     private MenuItem lemonade;
 
     @Autowired
+    @Qualifier("tavolo1")
     private Tavolo tavolo1;
 
     @Autowired
+    @Qualifier("tavolo2")
     private Tavolo tavolo2;
+
 
     @Value("${coperto.prezzo}")
     private double prezzoCoperto;
